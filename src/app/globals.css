@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #4a3d30;
+  --ink-soft: #5e5348;
+  --forest: #3d5c4a;
+  --forest-deep: #2f4d3d;
+  --moss: #4f6d5a;
+  --gold: #c4a46a;
+  --gold-soft: #d8c089;
+  --cream: #f6f1e7;
+  --parchment: #efe6d4;
+  --sand: #e4d8c0;
+  --terracotta: #8b4a32;
+  --stone: #6d655b;
+  --line: rgba(74, 61, 48, 0.16);
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-forest: var(--forest);
+  --color-forest-deep: var(--forest-deep);
+  --color-moss: var(--moss);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-cream: var(--cream);
+  --color-parchment: var(--parchment);
+  --color-sand: var(--sand);
+  --color-terracotta: var(--terracotta);
+  --color-stone: var(--stone);
+  --color-line: var(--line);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-sans), "Segoe UI", sans-serif;
+  font-feature-settings: "ss01" on, "kern" on;
+}
+
+::selection {
+  background: rgba(196, 164, 106, 0.35);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.font-serif {
+  font-family: var(--font-serif), "Times New Roman", serif;
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.rule {
+  height: 1px;
+  width: 4rem;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.grain {
+  position: relative;
+}
+
+.grain::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.prose-site p + p {
+  margin-top: 1.15rem;
+}
