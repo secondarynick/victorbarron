@@ -1,37 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #4a3d30;
-  --ink-soft: #5e5348;
-  --forest: #3d5c4a;
-  --forest-deep: #2f4d3d;
-  --moss: #4f6d5a;
-  --gold: #c4a46a;
-  --gold-soft: #d8c089;
-  --cream: #f6f1e7;
-  --parchment: #efe6d4;
-  --sand: #e4d8c0;
-  --terracotta: #8b4a32;
-  --stone: #6d655b;
-  --line: rgba(74, 61, 48, 0.16);
+  --heading: #201713;
+  --soft: #3e3630;
+  --muted: #7a7168;
+  --accent: #fb8c04;
+  --accent-deep: #e07d00;
+  --paper: #ffffff;
+  --mist: #f7f5f1;
+  --peach: #fff6ea;
+  --line: rgba(32, 23, 19, 0.14);
 }
 
 @theme inline {
-  --color-ink: var(--ink);
-  --color-ink-soft: var(--ink-soft);
-  --color-forest: var(--forest);
-  --color-forest-deep: var(--forest-deep);
-  --color-moss: var(--moss);
-  --color-gold: var(--gold);
-  --color-gold-soft: var(--gold-soft);
-  --color-cream: var(--cream);
-  --color-parchment: var(--parchment);
-  --color-sand: var(--sand);
-  --color-terracotta: var(--terracotta);
-  --color-stone: var(--stone);
+  --color-heading: var(--heading);
+  --color-soft: var(--soft);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-paper: var(--paper);
+  --color-mist: var(--mist);
+  --color-peach: var(--peach);
   --color-line: var(--line);
   --font-sans: var(--font-sans);
-  --font-serif: var(--font-serif);
 }
 
 * {
@@ -43,52 +34,81 @@ html {
 }
 
 body {
-  background: var(--cream);
-  color: var(--ink);
-  font-family: var(--font-sans), "Segoe UI", sans-serif;
-  font-feature-settings: "ss01" on, "kern" on;
+  background: var(--paper);
+  color: var(--soft);
+  font-family: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
 }
 
 ::selection {
-  background: rgba(196, 164, 106, 0.35);
-  color: var(--ink);
+  background: rgba(251, 140, 4, 0.22);
+  color: var(--heading);
 }
 
 :focus-visible {
-  outline: 2px solid var(--gold);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 
-.font-serif {
-  font-family: var(--font-serif), "Times New Roman", serif;
+h1,
+h2,
+h3 {
+  color: var(--heading);
+  text-rendering: optimizeLegibility;
 }
 
 .eyebrow {
   font-size: 0.72rem;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--gold);
+  color: var(--accent);
 }
 
 .rule {
-  height: 1px;
-  width: 4rem;
-  background: linear-gradient(90deg, var(--gold), transparent);
+  height: 2px;
+  width: 3.5rem;
+  background: var(--accent);
 }
 
-.grain {
-  position: relative;
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.75rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.grain::after {
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-  opacity: 0.18;
-  mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+.btn-solid {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-solid:hover {
+  background: var(--accent-deep);
+}
+
+.btn-outline {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-ghost {
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  color: #fff;
+}
+
+.btn-ghost:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .prose-site p + p {

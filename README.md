@@ -6,11 +6,13 @@ Upgraded website for [victorbarron.com](https://www.victorbarron.com) — a grou
 
 Studio: **Invisible Designs**. Hosting: **Vercel**.
 
-The current Squarespace site is content-rich and hard to navigate. This redesign keeps Victor’s voice and offerings, and gives them a calmer structure. The interface should recede so the work, the photos, and the next phone call stay in front.
+This is the current victorbarron.com design, upgraded — not a reinvention. The type, palette, and photography come straight from the live Squarespace site; the structure and spacing are tightened so it is easier to scan and act on.
 
-- Warm forest, parchment, and gold — sacred without feeling generic “new age”
-- No black: type is umber, dark bands are moss, photo veils are green rather than a black wash
-- Serif headlines (Cormorant Garamond) with a readable sans body
+- Raleway throughout, like the current site (light display headlines, letterspaced uppercase labels)
+- White pages with warm espresso headings (#201713) — no pure black anywhere
+- The site’s signature orange (#fb8c04) kept for every button and accent
+- Photography served from the live site’s own CDN, so visitors see the images they already know
+- The reflector announcement kept as a slim bar above the header, as on the current site
 - Clear paths: book a session, enter training, get the book, visit the store
 - Phone-first booking (Cecilia and the office), as the practice already works
 - Quiet chrome: skip-to-content, focus rings only when needed, a small studio credit in the footer
@@ -57,6 +59,6 @@ No environment variables are required for the first deploy. The contact form sti
 
 ## Notes
 
-- Photos are from the current public site.
+- Photos load from the current site’s Squarespace CDN (`images.squarespace-cdn.com`). Before cancelling Squarespace, download them into `public/images/` and update `src/lib/images.ts`. Local copies of most photos are already in `public/images/`.
 - Contact form opens the visitor’s email client (`cecilia@victorbarron.com`). A later pass can wire this to a hosted form or inbox.
 - Fees and 2026 workshop dates match the live calendar at the time of this redesign.

@@ -1,20 +1,14 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
+import { Raleway } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { site } from "@/lib/content";
 import "./globals.css";
 
-const sans = Source_Sans_3({
+const sans = Raleway({
   variable: "--font-sans",
   subsets: ["latin"],
-  display: "swap",
-});
-
-const serif = Cormorant_Garamond({
-  variable: "--font-serif",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -38,11 +32,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${sans.variable} ${serif.variable} h-full`}>
-      <body className="min-h-full bg-cream font-sans text-ink antialiased">
+    <html lang="en" className={`${sans.variable} h-full`}>
+      <body className="min-h-full bg-paper font-sans text-soft antialiased">
         <a
           href="#content"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-5 focus:top-5 focus:z-[60] focus:bg-gold focus:px-4 focus:py-2 focus:text-forest-deep"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-5 focus:top-5 focus:z-[60] focus:bg-accent focus:px-4 focus:py-2 focus:text-white"
         >
           Skip to content
         </a>
