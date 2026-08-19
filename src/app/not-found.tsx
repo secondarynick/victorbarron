@@ -2,16 +2,15 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <section className="bg-paper px-5 py-32 text-center">
-      <p className="eyebrow">404</p>
-      <h1 className="mt-4 text-4xl md:text-5xl">This page has moved</h1>
-      <p className="mx-auto mt-4 max-w-md text-muted">
-        The upgraded site uses clearer paths. Start at the home page or choose
-        a section from the menu.
+    <section className="mx-auto max-w-3xl px-5 py-28">
+      <h1 className="text-4xl">Page not found</h1>
+      <p className="mt-4 max-w-md leading-8 text-muted">
+        The page you are looking for has moved. Start at the{" "}
+        <Link href="/" className="text-accent underline underline-offset-4">
+          home page
+        </Link>{" "}
+        or choose a section from the menu above.
       </p>
-      <Link href="/" className="btn btn-solid mt-8">
-        Return home
-      </Link>
     </section>
   );
 }

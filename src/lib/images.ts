@@ -1,10 +1,8 @@
 const cdn =
   "https://images.squarespace-cdn.com/content/v1/525c0189e4b0ccf71c9ad1b9";
 
-// Photography from the current victorbarron.com (Squarespace CDN), so the
-// upgraded site keeps the exact imagery visitors already know.
+// Real photography only, from the current victorbarron.com (Squarespace CDN).
 export const photos = {
-  heroGathering: `${cdn}/1772140211358-ALBVBRFUW7NVSJQDCMD8/ChatGPT+Image+Feb+26%2C+2026%2C+01_09_23+PM.png?format=2500w`,
   victorRed: `${cdn}/1459039064449-XLU2DCYPP6DJ93FEVAMI/IMG_3897.JPG?format=1500w`,
   victorGreen: `${cdn}/1459293176225-OGU3A6YEIV0P4FMPJZNW/IMG_3865.JPG?format=1500w`,
   ceremony: `${cdn}/1459040009023-5HK87L2CYBQ9NKTOSYTJ/IMG_3713+2.jpg?format=2500w`,

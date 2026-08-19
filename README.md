@@ -6,16 +6,16 @@ Upgraded website for [victorbarron.com](https://www.victorbarron.com) — a grou
 
 Studio: **Invisible Designs**. Hosting: **Vercel**.
 
-This is the current victorbarron.com design, upgraded — not a reinvention. The type, palette, and photography come straight from the live Squarespace site; the structure and spacing are tightened so it is easier to scan and act on.
+Deliberately simple and editorial — a quiet, book-like site where the words and the real photographs carry everything.
 
-- Raleway throughout, like the current site (light display headlines, letterspaced uppercase labels)
-- White pages with warm espresso headings (#201713) — no pure black anywhere
-- The site’s signature orange (#fb8c04) kept for every button and accent
-- Photography served from the live site’s own CDN, so visitors see the images they already know
-- The reflector announcement kept as a slim bar above the header, as on the current site
-- Clear paths: book a session, enter training, get the book, visit the store
+- One typeface: Newsreader (a warm editorial serif), set on a single reading column
+- Warm paper background, espresso ink, one ochre accent for links — nothing else
+- No hero banners, no cards, no overlays, no uppercase label chrome
+- Real photography only, from the live site’s own CDN (no generated imagery)
+- Hairline rules and whitespace do the structural work
 - Phone-first booking (Cecilia and the office), as the practice already works
-- Quiet chrome: skip-to-content, focus rings only when needed, a small studio credit in the footer
+- Zero client-side JavaScript in the chrome: the header is a plain wrapping nav, no hamburger
+- Skip-to-content, visible focus rings, and a small studio credit in the footer
 
 ## Pages
 

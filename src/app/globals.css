@@ -1,32 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --heading: #201713;
-  --soft: #3e3630;
-  --muted: #7a7168;
-  --accent: #fb8c04;
-  --accent-deep: #e07d00;
-  --paper: #ffffff;
-  --mist: #f7f5f1;
-  --peach: #fff6ea;
-  --line: rgba(32, 23, 19, 0.14);
+  --paper: #fdfcf9;
+  --ink: #2b241d;
+  --muted: #6e655a;
+  --accent: #9a4b0f;
+  --hairline: rgba(43, 36, 29, 0.16);
 }
 
 @theme inline {
-  --color-heading: var(--heading);
-  --color-soft: var(--soft);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
   --color-muted: var(--muted);
   --color-accent: var(--accent);
-  --color-accent-deep: var(--accent-deep);
-  --color-paper: var(--paper);
-  --color-mist: var(--mist);
-  --color-peach: var(--peach);
-  --color-line: var(--line);
-  --font-sans: var(--font-sans);
+  --color-hairline: var(--hairline);
+  --font-serif: var(--font-serif);
 }
 
 * {
-  border-color: var(--line);
+  border-color: var(--hairline);
 }
 
 html {
@@ -35,13 +27,14 @@ html {
 
 body {
   background: var(--paper);
-  color: var(--soft);
-  font-family: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: rgba(251, 140, 4, 0.22);
-  color: var(--heading);
+  background: rgba(154, 75, 15, 0.16);
 }
 
 :focus-visible {
@@ -52,65 +45,34 @@ body {
 h1,
 h2,
 h3 {
-  color: var(--heading);
-  text-rendering: optimizeLegibility;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
 }
 
-.eyebrow {
-  font-size: 0.72rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  font-weight: 600;
+main a {
   color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(154, 75, 15, 0.4);
+  transition: text-decoration-color 0.15s ease;
 }
 
-.rule {
-  height: 2px;
-  width: 3.5rem;
-  background: var(--accent);
+main a:hover {
+  text-decoration-color: var(--accent);
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.85rem 1.75rem;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-}
-
-.btn-solid {
-  background: var(--accent);
-  color: #fff;
-}
-
-.btn-solid:hover {
-  background: var(--accent-deep);
-}
-
-.btn-outline {
-  border: 1px solid var(--accent);
-  color: var(--accent);
-}
-
-.btn-outline:hover {
-  background: var(--accent);
-  color: #fff;
-}
-
-.btn-ghost {
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  color: #fff;
-}
-
-.btn-ghost:hover {
-  border-color: #fff;
-  background: rgba(255, 255, 255, 0.12);
+.ui {
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
 }
 
 .prose-site p + p {
-  margin-top: 1.15rem;
+  margin-top: 1.25em;
 }
