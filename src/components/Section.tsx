@@ -8,8 +8,8 @@ type SectionProps = {
 
 export function Section({ children, className = "", id }: SectionProps) {
   return (
-    <section id={id} className={`px-5 py-20 md:px-8 md:py-28 ${className}`}>
-      <div className="mx-auto max-w-6xl">{children}</div>
+    <section id={id} className={`mx-auto max-w-3xl px-5 ${className}`}>
+      {children}
     </section>
   );
 }
