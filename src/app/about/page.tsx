@@ -15,96 +15,58 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About"
-        title="A life given to God"
-        lede="Humility, integrity, and faith have been the ground of Victor’s work for more than thirty-five years."
-        image={photos.victorGreen}
+        title="About Victor"
+        lede="Shaman, spiritual healer, shaman teacher, clairvoyant, and medium — with a special gift for accelerating a person's spiritual growth."
       />
 
-      <Section className="bg-paper">
-        <div className="grid gap-14 md:grid-cols-12">
-          <div className="md:col-span-7">
-            <h2 className="text-4xl md:text-5xl">Shaman, healer, teacher</h2>
-            <div className="rule mt-6" />
-            <div className="prose-site mt-8 max-w-2xl text-lg leading-8 text-soft">
-              <p>
-                Shaman, Spiritual Healer, Shaman Teacher, Clairvoyant, and
-                Medium are among Victor Barron’s spiritual gifts. He has a
-                special gift for accelerating a person’s spiritual growth.
-              </p>
-              <p>
-                At a very early age, Victor’s unconditional love for God
-                awakened a passion within him to help humanity heal itself. God
-                has entrusted him with these gifts and with the ability to see
-                and know beyond the ordinary limits of the physical senses.
-              </p>
-              <p>
-                He is the author of <em>Humanity’s Spiritual Plague</em>, and he
-                has established a school where students practice his principles
-                and learn how to bring healing to their clients. His goal has
-                always been to help people establish an unbreakable spiritual
-                foundation and bond with God.
-              </p>
-              <p>
-                Throughout more than thirty-five years of healing others, he has
-                stressed humility, integrity, and faith in God. He teaches his
-                basic principles and provides ongoing training at the Body Mind
-                & Spirit Healing Center in Whittier, California — the original
-                training ground where it all began.
-              </p>
-              <p>
-                Students from around the world come to experience his training
-                firsthand. During the process, every student receives continuous
-                healing while learning to understand their own God-given
-                spiritual gifts.
-              </p>
-            </div>
-          </div>
-          <aside className="md:col-span-4 md:col-start-9">
-            <div className="border border-line bg-mist p-8">
-              <p className="eyebrow">The Center</p>
-              <p className="mt-4 text-2xl font-medium text-heading">
-                Body Mind & Spirit Healing Center
-              </p>
-              <p className="mt-4 leading-7 text-soft">
-                6347 Friends Avenue
-                <br />
-                Whittier, California 90601
-              </p>
-              <p className="mt-6 text-sm leading-7 text-muted">
-                Also teaching in Europe and on the East Coast of the United
-                States.
-              </p>
-              <Link
-                href="/training"
-                className="mt-8 inline-flex text-[0.72rem] font-semibold tracking-[0.2em] text-accent uppercase hover:text-accent-deep"
-              >
-                See the training path →
-              </Link>
-            </div>
-          </aside>
+      <div className="mx-auto mt-12 max-w-3xl px-5">
+        <div className="relative aspect-[3/2] overflow-hidden">
+          <Image
+            src={photos.victorRed}
+            alt="Victor Barron at the Body Mind & Spirit Healing Center"
+            fill
+            priority
+            sizes="(min-width: 768px) 720px, 100vw"
+            className="object-cover"
+          />
         </div>
-      </Section>
+        <p className="ui mt-3 text-xs text-muted">
+          Victor at the Body Mind & Spirit Healing Center in Whittier.
+        </p>
+      </div>
 
-      <Section className="bg-mist">
-        <div className="grid gap-6 md:grid-cols-3">
-          {[photos.galleryHands, photos.galleryAltar, photos.virginMary].map(
-            (src) => (
-              <div
-                key={src}
-                className="relative aspect-[4/5] overflow-hidden bg-paper"
-              >
-                <Image
-                  src={src}
-                  alt=""
-                  fill
-                  sizes="(min-width: 768px) 33vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-            ),
-          )}
-        </div>
+      <Section className="prose-site mt-12 mb-24 max-w-3xl leading-8">
+        <p>
+          At a very early age, Victor’s unconditional love for God awakened a
+          passion within him to help humanity heal itself. God has entrusted
+          him with these gifts and with the ability to see and know beyond the
+          ordinary limits of the physical senses.
+        </p>
+        <p>
+          He is the author of <em>Humanity’s Spiritual Plague</em>, and he has
+          established a school where students practice his principles and learn
+          how to bring healing to their clients. His goal has always been to
+          help people establish an unbreakable spiritual foundation and bond
+          with God.
+        </p>
+        <p>
+          Throughout more than thirty-five years of healing others, he has
+          stressed humility, integrity, and faith in God. He teaches his basic
+          principles and provides ongoing training at the Body Mind & Spirit
+          Healing Center in Whittier, California — the original training ground
+          where it all began — and also in Europe and on the East Coast of the
+          United States.
+        </p>
+        <p>
+          Students from around the world come to experience his training
+          firsthand. During the process, every student receives continuous
+          healing while learning to understand their own God-given spiritual
+          gifts.
+        </p>
+        <p className="mt-8">
+          <Link href="/sessions">Book a session</Link> ·{" "}
+          <Link href="/training">Study with Victor</Link>
+        </p>
       </Section>
     </>
   );

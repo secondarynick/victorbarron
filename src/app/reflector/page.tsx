@@ -15,87 +15,66 @@ export default function ReflectorPage() {
   return (
     <>
       <PageHero
-        eyebrow="Blessed instrument"
         title="Super Spiritual Reflector"
-        lede="An instrument of God, blessed and activated to protect the physical body’s energy field as you sleep and work."
+        lede="A blessed instrument of God — activated to protect the physical body’s energy field as you sleep and work."
       />
 
-      <Section className="bg-paper">
-        <div className="grid items-center gap-12 md:grid-cols-12">
-          <div className="md:col-span-5">
-            <div className="relative aspect-[4/3] overflow-hidden border border-line bg-mist">
-              <Image
-                src={photos.reflector}
-                alt="Super Spiritual Reflector / Neutralizor"
-                fill
-                sizes="(min-width: 768px) 40vw, 100vw"
-                className="object-cover"
-              />
-            </div>
-          </div>
-          <div className="md:col-span-6 md:col-start-7">
-            <p className="text-lg leading-8 text-soft">
-              In addition to the magnetic grid, Victor was told in 2000 that a
-              reflector would one day be needed in the home or office to assist
-              and protect the physical body. Our generation of communication has
-              made life easier — and produced electromagnetic radiation that
-              interferes with the body’s own energy field.
-            </p>
-            <p className="mt-6 text-lg leading-8 text-soft">
-              Once blessed and activated, the Super Spiritual Reflector /
-              Neutralizor can be used to protect that field from electromagnetic
-              waste and pollution. With God’s blessing. Amen.
-            </p>
-          </div>
-        </div>
+      <Section className="prose-site mt-10 max-w-3xl leading-8">
+        <p>
+          In addition to the magnetic grid, Victor was told in 2000 that a
+          reflector would one day be needed in the home or office to assist and
+          protect the physical body. Our generation of communication has made
+          life easier — and produced electromagnetic radiation that interferes
+          with the body’s own energy field.
+        </p>
+        <p>
+          Once blessed and activated, the Super Spiritual Reflector /
+          Neutralizor protects that field from electromagnetic waste and
+          pollution. With God’s blessing. Amen.
+        </p>
       </Section>
 
-      <Section className="bg-mist">
-        <p className="eyebrow">Benefits</p>
-        <h2 className="mt-4 text-3xl md:text-4xl">What it is given to do</h2>
-        <ul className="mt-10 grid gap-4 md:grid-cols-2">
+      <div className="mx-auto mt-12 max-w-3xl px-5">
+        <div className="relative aspect-[3/2] overflow-hidden">
+          <Image
+            src={photos.reflector}
+            alt="The Super Spiritual Reflector / Neutralizor"
+            fill
+            sizes="(min-width: 768px) 720px, 100vw"
+            className="object-cover"
+          />
+        </div>
+        <p className="ui mt-3 text-xs text-muted">
+          The Reflector / Neutralizor, blessed at the Center.
+        </p>
+      </div>
+
+      <Section className="mt-14">
+        <h2 className="text-2xl">What it is given to do</h2>
+        <ul className="mt-4 max-w-2xl space-y-1.5 leading-8">
           {reflectorBenefits.map((item) => (
-            <li
-              key={item}
-              className="border-l-2 border-accent bg-paper py-3 pl-4 leading-7 text-soft"
-            >
-              {item}
-            </li>
+            <li key={item}>{item}</li>
           ))}
         </ul>
       </Section>
 
-      <Section className="bg-paper">
-        <div className="grid gap-12 md:grid-cols-2">
-          <div>
-            <p className="eyebrow">Prices</p>
-            <h2 className="mt-4 text-3xl md:text-4xl">Choose the scale</h2>
-            <dl className="mt-8 divide-y divide-line border-y border-line">
-              {reflectorPrices.map((item) => (
-                <div
-                  key={item.name}
-                  className="flex items-baseline justify-between py-4"
-                >
-                  <dt className="text-soft">{item.name}</dt>
-                  <dd className="font-semibold text-heading">{item.price}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-          <div className="bg-peach p-10">
-            <p className="eyebrow">To order</p>
-            <p className="mt-4 text-3xl font-medium text-heading">
-              Call the office
-            </p>
-            <p className="mt-4 leading-8 text-soft">
-              For information and current availability, call the Body Mind &
-              Spirit Healing Center.
-            </p>
-            <a href={site.phoneOfficeHref} className="btn btn-solid mt-8">
-              {site.phoneOffice}
-            </a>
-          </div>
-        </div>
+      <Section className="mt-16 mb-24">
+        <h2 className="text-2xl">Prices</h2>
+        <dl className="mt-6 max-w-2xl divide-y divide-hairline border-y border-hairline">
+          {reflectorPrices.map((item) => (
+            <div
+              key={item.name}
+              className="flex items-baseline justify-between py-4"
+            >
+              <dt>{item.name}</dt>
+              <dd className="ui text-[15px]">{item.price}</dd>
+            </div>
+          ))}
+        </dl>
+        <p className="mt-4 text-muted">
+          To order, call the office at{" "}
+          <a href={site.phoneOfficeHref}>{site.phoneOffice}</a>.
+        </p>
       </Section>
     </>
   );
