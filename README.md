@@ -59,6 +59,6 @@ No environment variables are required for the first deploy. The contact form sti
 
 ## Notes
 
-- Photos load from the current site’s Squarespace CDN (`images.squarespace-cdn.com`). Before cancelling Squarespace, download them into `public/images/` and update `src/lib/images.ts`. Local copies of most photos are already in `public/images/`.
+- Photos load from the current site’s Squarespace CDN (`images.squarespace-cdn.com`). Only real photographs are used — no AI-generated imagery (the two “ChatGPT Image” files on that CDN are deliberately excluded). Before cancelling Squarespace, download the five photos listed in `src/lib/images.ts` into `public/images/` and update the paths.
 - Contact form opens the visitor’s email client (`cecilia@victorbarron.com`). A later pass can wire this to a hosted form or inbox.
 - Fees and 2026 workshop dates match the live calendar at the time of this redesign.
