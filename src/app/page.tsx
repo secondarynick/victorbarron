@@ -7,6 +7,7 @@ import {
   testimonials,
   upcomingEvents,
 } from "@/lib/content";
+import { photos } from "@/lib/images";
 
 const paths = [
   {
@@ -22,7 +23,7 @@ const paths = [
   {
     href: "/book",
     title: "The Book",
-    copy: "Humanity’s Spiritual Plague — awarded Independent Publisher Book Awards finalist.",
+    copy: "Humanity’s Spiritual Plague — an Independent Publisher Book Awards finalist.",
   },
   {
     href: "/reflector",
@@ -34,63 +35,57 @@ const paths = [
 export default function Home() {
   return (
     <>
-      <section className="relative isolate min-h-[92vh] overflow-hidden bg-forest-deep">
+      <section className="relative isolate flex min-h-[86vh] items-center justify-center overflow-hidden">
         <Image
-          src="/images/victor-hero.webp"
-          alt="Victor Barron"
+          src={photos.heroGathering}
+          alt="A prayer gathering at sunset"
           fill
           priority
-          className="object-cover object-[center_20%] opacity-70"
+          sizes="100vw"
+          className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-forest/45 via-forest/40 to-forest" />
-        <div className="relative mx-auto flex min-h-[86vh] max-w-6xl flex-col justify-end px-5 pb-20 pt-16 md:px-8 md:pb-24">
-          <p className="eyebrow">World-renowned · Whittier, California</p>
-          <h1 className="mt-5 max-w-3xl font-serif text-6xl leading-[0.9] text-cream md:text-8xl">
-            Spiritual
-            <br />
-            Healer
+        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(32,23,19,0.34)] via-[rgba(32,23,19,0.30)] to-[rgba(32,23,19,0.55)]" />
+        <div className="relative mx-auto max-w-4xl px-5 py-24 text-center md:px-8">
+          <p className="eyebrow">World-Renowned</p>
+          <h1 className="mt-4 text-6xl leading-none font-light text-white md:text-8xl">
+            Spiritual Healer
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-8 text-cream/80">
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-white/90">
             Shaman, clairvoyant, medium, and teacher. For more than thirty-five
             years, Victor Barron has helped people heal and establish an
             unbreakable bond with God.
           </p>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link
-              href="/sessions"
-              className="bg-gold px-6 py-3 text-[0.72rem] tracking-[0.22em] text-forest-deep uppercase transition hover:bg-gold-soft"
-            >
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <Link href="/sessions" className="btn btn-solid">
               Book a Session
             </Link>
-            <Link
-              href="/calendar"
-              className="border border-cream/40 px-6 py-3 text-[0.72rem] tracking-[0.22em] text-cream uppercase transition hover:border-gold hover:text-gold"
-            >
+            <Link href="/calendar" className="btn btn-ghost">
               View the Calendar
             </Link>
           </div>
         </div>
       </section>
 
-      <Section className="bg-cream">
+      <Section className="bg-paper">
         <div className="grid items-center gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden bg-sand">
+            <div className="relative aspect-[4/3] overflow-hidden bg-mist shadow-[0_18px_50px_rgba(32,23,19,0.14)] md:aspect-[4/5]">
               <Image
-                src="/images/victor-portrait.webp"
+                src={photos.victorRed}
                 alt="Portrait of Victor Barron"
                 fill
-                className="object-cover object-top"
+                sizes="(min-width: 768px) 40vw, 100vw"
+                className="object-cover object-[65%_center]"
               />
             </div>
           </div>
           <div className="md:col-span-6 md:col-start-7">
             <p className="eyebrow">About</p>
-            <h2 className="mt-4 font-serif text-5xl leading-[0.95] md:text-6xl">
+            <h2 className="mt-4 text-4xl leading-tight md:text-5xl">
               Victor Barron
             </h2>
             <div className="rule mt-6" />
-            <div className="prose-site mt-8 text-[1.05rem] leading-8 text-ink-soft">
+            <div className="prose-site mt-8 text-[1.02rem] leading-8 text-soft">
               <p>
                 Shaman, Spiritual Healer, Shaman Teacher, Clairvoyant, and
                 Medium are among his gifts. At a very early age, Victor’s
@@ -106,7 +101,7 @@ export default function Home() {
             </div>
             <Link
               href="/about"
-              className="mt-8 inline-flex text-[0.72rem] tracking-[0.22em] text-terracotta uppercase hover:text-forest"
+              className="mt-8 inline-flex text-[0.72rem] font-semibold tracking-[0.2em] text-accent uppercase hover:text-accent-deep"
             >
               Read his story →
             </Link>
@@ -114,24 +109,24 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section className="bg-parchment">
-        <div className="max-w-2xl">
+      <Section className="bg-mist">
+        <div className="mx-auto max-w-2xl text-center">
           <p className="eyebrow">Begin here</p>
-          <h2 className="mt-4 font-serif text-5xl leading-tight">
+          <h2 className="mt-4 text-4xl leading-tight md:text-5xl">
             Four ways to work with Victor
           </h2>
         </div>
-        <div className="mt-14 grid gap-px bg-line md:grid-cols-2">
+        <div className="mt-14 grid gap-6 md:grid-cols-2">
           {paths.map((path) => (
             <Link
               key={path.href}
               href={path.href}
-              className="group bg-parchment p-8 transition hover:bg-cream md:p-10"
+              className="group border border-line bg-paper p-8 transition hover:border-accent md:p-10"
             >
-              <h3 className="font-serif text-3xl group-hover:text-terracotta">
+              <h3 className="text-2xl font-medium group-hover:text-accent">
                 {path.title}
               </h3>
-              <p className="mt-3 max-w-md text-base leading-7 text-ink-soft">
+              <p className="mt-3 max-w-md text-base leading-7 text-muted">
                 {path.copy}
               </p>
             </Link>
@@ -139,37 +134,34 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section className="bg-forest text-cream">
+      <Section className="bg-paper">
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div>
             <p className="eyebrow">Upcoming</p>
-            <h2 className="mt-4 font-serif text-5xl leading-tight">
+            <h2 className="mt-4 text-4xl leading-tight md:text-5xl">
               Workshops at the Center
             </h2>
           </div>
           <Link
             href="/calendar"
-            className="text-[0.72rem] tracking-[0.22em] text-gold uppercase hover:text-gold-soft"
+            className="text-[0.72rem] font-semibold tracking-[0.2em] text-accent uppercase hover:text-accent-deep"
           >
             Full calendar →
           </Link>
         </div>
-        <div className="mt-14 grid gap-8 md:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
           {upcomingEvents.map((event) => (
-            <article
-              key={event.title}
-              className="border border-cream/15 p-8 md:p-10"
-            >
-              <p className="text-[0.72rem] tracking-[0.2em] text-gold uppercase">
+            <article key={event.title} className="border border-line p-8 md:p-10">
+              <p className="text-[0.72rem] font-semibold tracking-[0.2em] text-accent uppercase">
                 {event.dates}
               </p>
-              <h3 className="mt-4 font-serif text-3xl leading-tight">
+              <h3 className="mt-4 text-2xl leading-snug font-medium">
                 {event.title}
               </h3>
-              <p className="mt-3 text-sm text-cream/60">
+              <p className="mt-3 text-sm text-muted">
                 {event.place} · {event.time}
               </p>
-              <p className="mt-5 text-base leading-8 text-cream/75">
+              <p className="mt-5 text-base leading-8 text-soft">
                 {event.summary}
               </p>
             </article>
@@ -177,34 +169,51 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section className="bg-cream">
+      <section
+        className="relative isolate overflow-hidden py-24 md:py-32"
+        style={{
+          backgroundImage: `linear-gradient(180deg, rgba(32, 23, 19, 0.5), rgba(32, 23, 19, 0.62)), url(${photos.ceremony})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center 30%",
+        }}
+      >
+        <div className="mx-auto max-w-3xl px-5 text-center md:px-8">
+          <p className="eyebrow">A message to humanity</p>
+          <p className="mt-8 text-2xl leading-relaxed font-light text-white md:text-3xl">
+            {messageToHumanity[0]}
+          </p>
+          <p className="mt-10 text-base font-semibold tracking-[0.3em] text-accent uppercase">
+            God bless · Victor
+          </p>
+        </div>
+      </section>
+
+      <Section className="bg-paper">
         <div className="grid items-center gap-12 md:grid-cols-12">
           <div className="md:col-span-6">
             <p className="eyebrow">Award-winning author</p>
-            <h2 className="mt-4 font-serif text-5xl leading-tight md:text-6xl">
+            <h2 className="mt-4 text-4xl leading-tight md:text-5xl">
               Humanity&apos;s Spiritual Plague
             </h2>
-            <p className="mt-6 max-w-lg text-lg leading-8 text-ink-soft">
+            <p className="mt-6 max-w-lg text-lg leading-8 text-soft">
               A must-read for anyone interested in the spiritual world. Victor
               explains two of the greatest spiritual problems facing humanity
               and the simple methods given to him by God for resolving them.
             </p>
-            <p className="mt-4 text-sm tracking-wide text-stone uppercase">
+            <p className="mt-4 text-sm tracking-wide text-muted uppercase">
               2004 Independent Publisher Book Awards finalist · English & Spanish
             </p>
-            <Link
-              href="/book"
-              className="mt-8 inline-flex bg-forest px-6 py-3 text-[0.72rem] tracking-[0.22em] text-cream uppercase hover:bg-moss"
-            >
+            <Link href="/book" className="btn btn-solid mt-8">
               Get your copy
             </Link>
           </div>
           <div className="md:col-span-5 md:col-start-8">
-            <div className="relative mx-auto aspect-[3/4] max-w-sm overflow-hidden bg-sand shadow-[0_30px_80px_rgba(61,92,74,0.16)]">
+            <div className="relative mx-auto aspect-[3/4] max-w-sm overflow-hidden bg-mist shadow-[0_24px_60px_rgba(32,23,19,0.16)]">
               <Image
-                src="/images/book-cover.webp"
+                src={photos.bookCover}
                 alt="Cover of Humanity's Spiritual Plague"
                 fill
+                sizes="(min-width: 768px) 33vw, 90vw"
                 className="object-cover"
               />
             </div>
@@ -212,21 +221,23 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section className="bg-parchment">
-        <p className="eyebrow">Testimonials</p>
-        <h2 className="mt-4 max-w-xl font-serif text-5xl leading-tight">
-          What people carry home
-        </h2>
+      <Section className="bg-mist">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="eyebrow">Testimonials</p>
+          <h2 className="mt-4 text-4xl leading-tight md:text-5xl">
+            What people carry home
+          </h2>
+        </div>
         <div className="mt-14 grid gap-8 md:grid-cols-2">
           {testimonials.map((item) => (
             <blockquote
               key={item.initials}
-              className="border-l border-gold pl-6"
+              className="border-l-2 border-accent bg-paper p-7 pl-8"
             >
-              <p className="font-serif text-2xl leading-8 text-ink/95">
+              <p className="text-[1.05rem] leading-8 text-soft">
                 “{item.quote}”
               </p>
-              <footer className="mt-5 text-[0.72rem] tracking-[0.2em] text-stone uppercase">
+              <footer className="mt-5 text-[0.72rem] font-semibold tracking-[0.2em] text-muted uppercase">
                 — {item.initials}
               </footer>
             </blockquote>
@@ -234,51 +245,39 @@ export default function Home() {
         </div>
       </Section>
 
-      <section className="relative isolate overflow-hidden bg-forest-deep py-24 md:py-32">
-        <Image
-          src="/images/prayer.webp"
-          alt=""
-          fill
-          className="object-cover opacity-25"
-        />
-        <div className="relative mx-auto max-w-3xl px-5 text-center md:px-8">
-          <p className="eyebrow">A message to humanity</p>
-          <p className="mt-8 font-serif text-3xl leading-snug text-cream md:text-4xl">
-            {messageToHumanity[0]}
-          </p>
-          <p className="mt-10 font-serif text-xl tracking-[0.28em] text-gold uppercase">
-            God bless · Victor
-          </p>
-        </div>
-      </section>
-
-      <Section className="bg-cream">
+      <Section className="bg-paper">
         <div className="grid gap-10 border border-line p-8 md:grid-cols-2 md:p-14">
           <div>
             <p className="eyebrow">Visit the center</p>
-            <h2 className="mt-4 font-serif text-4xl">{site.address.name}</h2>
-            <p className="mt-4 text-lg leading-8 text-ink-soft">
+            <h2 className="mt-4 text-3xl md:text-4xl">{site.address.name}</h2>
+            <p className="mt-4 text-lg leading-8 text-soft">
               {site.address.street}
               <br />
               {site.address.city}
             </p>
           </div>
           <div className="md:self-end">
-            <p className="text-base leading-8 text-ink-soft">
+            <p className="text-base leading-8 text-soft">
               To arrange a spiritual session or inquire about classes, call
               Cecilia at{" "}
-              <a className="text-terracotta underline" href={site.phoneCeciliaHref}>
+              <a
+                className="font-semibold text-accent hover:underline"
+                href={site.phoneCeciliaHref}
+              >
                 {site.phoneCecilia}
               </a>{" "}
               or the office at{" "}
-              <a className="text-terracotta underline" href={site.phoneOfficeHref}>
+              <a
+                className="font-semibold text-accent hover:underline"
+                href={site.phoneOfficeHref}
+              >
                 {site.phoneOffice}
               </a>
               .
             </p>
             <Link
               href="/contact"
-              className="mt-6 inline-flex text-[0.72rem] tracking-[0.22em] uppercase hover:text-terracotta"
+              className="mt-6 inline-flex text-[0.72rem] font-semibold tracking-[0.2em] text-accent uppercase hover:text-accent-deep"
             >
               Contact & directions →
             </Link>

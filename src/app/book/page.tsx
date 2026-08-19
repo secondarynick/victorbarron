@@ -3,6 +3,7 @@ import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { site } from "@/lib/content";
+import { photos } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Humanity’s Spiritual Plague",
@@ -19,24 +20,25 @@ export default function BookPage() {
         lede="Two of the greatest spiritual problems facing humanity — and the simple methods given to Victor by God."
       />
 
-      <Section className="bg-cream">
+      <Section className="bg-paper">
         <div className="grid items-start gap-14 md:grid-cols-12">
           <div className="md:col-span-5">
-            <div className="relative aspect-[3/4] overflow-hidden bg-sand shadow-[0_24px_70px_rgba(61,92,74,0.14)]">
+            <div className="relative aspect-[3/4] overflow-hidden bg-mist shadow-[0_20px_55px_rgba(32,23,19,0.15)]">
               <Image
-                src="/images/book-cover.webp"
+                src={photos.bookCover}
                 alt="Humanity's Spiritual Plague book cover"
                 fill
+                sizes="(min-width: 768px) 40vw, 100vw"
                 className="object-cover"
               />
             </div>
           </div>
           <div className="md:col-span-6 md:col-start-7">
             <p className="eyebrow">By Victor Barron</p>
-            <h2 className="mt-4 font-serif text-4xl md:text-5xl">
+            <h2 className="mt-4 text-4xl md:text-5xl">
               A practical teaching for a wounded world
             </h2>
-            <div className="prose-site mt-8 text-lg leading-8 text-ink-soft">
+            <div className="prose-site mt-8 text-lg leading-8 text-soft">
               <p>
                 A must-read for anyone interested in the spiritual world.
                 Victor’s book explains two of the biggest spiritual problems
@@ -56,20 +58,17 @@ export default function BookPage() {
                 physical well-being of those you seek to help.
               </p>
             </div>
-            <p className="mt-8 border-l border-gold pl-5 text-sm leading-7 text-stone">
+            <p className="mt-8 border-l-2 border-accent pl-5 text-sm leading-7 text-muted">
               Awarded finalist in the 2004 Independent Publisher Book Awards.
               There were 2,086 titles entered in the New Age category, and only
               one winner and two finalists.
             </p>
-            <p className="mt-8 leading-8 text-ink-soft">
+            <p className="mt-8 leading-8 text-soft">
               Available in English and Spanish. Other European languages can be
               requested through the Grandmother Turtle Center in Europe. US
               shipping only from this office.
             </p>
-            <a
-              href={site.phoneOfficeHref}
-              className="mt-8 inline-flex bg-forest px-6 py-3 text-[0.72rem] tracking-[0.22em] text-cream uppercase"
-            >
+            <a href={site.phoneOfficeHref} className="btn btn-solid mt-8">
               Order by phone · {site.phoneOffice}
             </a>
           </div>

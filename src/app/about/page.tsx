@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
+import { photos } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "About",
@@ -17,16 +18,15 @@ export default function AboutPage() {
         eyebrow="About"
         title="A life given to God"
         lede="Humility, integrity, and faith have been the ground of Victor’s work for more than thirty-five years."
-        image="/images/victor-teaching.webp"
+        image={photos.victorGreen}
       />
 
-      <Section className="bg-cream">
+      <Section className="bg-paper">
         <div className="grid gap-14 md:grid-cols-12">
           <div className="md:col-span-7">
-            <h2 className="font-serif text-4xl md:text-5xl">
-              Shaman, healer, teacher
-            </h2>
-            <div className="prose-site mt-8 max-w-2xl text-lg leading-8 text-ink-soft">
+            <h2 className="text-4xl md:text-5xl">Shaman, healer, teacher</h2>
+            <div className="rule mt-6" />
+            <div className="prose-site mt-8 max-w-2xl text-lg leading-8 text-soft">
               <p>
                 Shaman, Spiritual Healer, Shaman Teacher, Clairvoyant, and
                 Medium are among Victor Barron’s spiritual gifts. He has a
@@ -61,23 +61,23 @@ export default function AboutPage() {
             </div>
           </div>
           <aside className="md:col-span-4 md:col-start-9">
-            <div className="border border-line bg-parchment p-8">
+            <div className="border border-line bg-mist p-8">
               <p className="eyebrow">The Center</p>
-              <p className="mt-4 font-serif text-3xl">
+              <p className="mt-4 text-2xl font-medium text-heading">
                 Body Mind & Spirit Healing Center
               </p>
-              <p className="mt-4 leading-7 text-ink-soft">
+              <p className="mt-4 leading-7 text-soft">
                 6347 Friends Avenue
                 <br />
                 Whittier, California 90601
               </p>
-              <p className="mt-6 text-sm leading-7 text-stone">
+              <p className="mt-6 text-sm leading-7 text-muted">
                 Also teaching in Europe and on the East Coast of the United
                 States.
               </p>
               <Link
                 href="/training"
-                className="mt-8 inline-flex text-[0.72rem] tracking-[0.2em] text-terracotta uppercase"
+                className="mt-8 inline-flex text-[0.72rem] font-semibold tracking-[0.2em] text-accent uppercase hover:text-accent-deep"
               >
                 See the training path →
               </Link>
@@ -86,17 +86,24 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section className="bg-parchment">
+      <Section className="bg-mist">
         <div className="grid gap-6 md:grid-cols-3">
-          {[
-            "/images/workshop-1.webp",
-            "/images/workshop-3.webp",
-            "/images/virgin-mary.webp",
-          ].map((src) => (
-            <div key={src} className="relative aspect-[4/5] overflow-hidden bg-sand">
-              <Image src={src} alt="" fill className="object-cover" />
-            </div>
-          ))}
+          {[photos.galleryHands, photos.galleryAltar, photos.virginMary].map(
+            (src) => (
+              <div
+                key={src}
+                className="relative aspect-[4/5] overflow-hidden bg-paper"
+              >
+                <Image
+                  src={src}
+                  alt=""
+                  fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            ),
+          )}
         </div>
       </Section>
     </>
