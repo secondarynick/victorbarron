@@ -42,7 +42,7 @@ export default function CalendarPage() {
             </article>
           ))}
         </div>
-        <p className="mt-6 text-muted">
+        <p className="mt-6">
           <Link href="/training">Read about the training path</Link>
         </p>
       </Section>

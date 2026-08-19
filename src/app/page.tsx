@@ -16,7 +16,7 @@ export default function Home() {
         <h1 className="max-w-2xl text-4xl leading-[1.15] md:text-[3.4rem]">
           Spiritual healer and shaman teacher in Whittier, California.
         </h1>
-        <p className="mt-7 max-w-xl text-xl leading-8 text-muted">
+        <p className="mt-7 max-w-xl text-xl leading-9">
           For more than thirty-five years, Victor Barron has helped people heal
           and establish an unbreakable bond with God — in person at the Body
           Mind & Spirit Healing Center, and by phone or Zoom anywhere in the
@@ -29,7 +29,7 @@ export default function Home() {
       </Section>
 
       <div className="mx-auto mt-16 max-w-5xl px-5 md:mt-24">
-        <div className="relative aspect-[3/2] overflow-hidden md:aspect-[5/2]">
+        <div className="relative aspect-[3/2] overflow-hidden md:aspect-[2/1]">
           <Image
             src={photos.ceremony}
             alt="Victor Barron during a healing ceremony"
@@ -59,7 +59,7 @@ export default function Home() {
         </p>
       </Section>
 
-      <Section className="mt-16 md:mt-20">
+      <Section className="mt-20 md:mt-28">
         <h2 className="text-2xl md:text-3xl">Healer training</h2>
         <p className="mt-4 max-w-2xl leading-8">
           Victor teaches a multi-year path — basic, intermediate, and advanced
@@ -73,7 +73,7 @@ export default function Home() {
         </p>
       </Section>
 
-      <Section className="mt-16 md:mt-20">
+      <Section className="mt-20 md:mt-28">
         <h2 className="text-2xl md:text-3xl">Upcoming at the Center</h2>
         <ul className="mt-6 divide-y divide-hairline border-y border-hairline">
           {upcomingEvents.map((event) => (
@@ -118,8 +118,10 @@ export default function Home() {
       </Section>
 
       <Section className="mt-20 md:mt-28">
-        <blockquote className="border-l-2 border-accent/50 pl-6">
-          <p className="text-xl leading-9 italic">“{testimonials[1].quote}”</p>
+        <blockquote>
+          <p className="max-w-2xl text-xl leading-9 italic">
+            “{testimonials[1].quote}”
+          </p>
           <footer className="ui mt-4 text-[13px] text-muted">
             — {testimonials[1].initials}
           </footer>
@@ -145,7 +147,7 @@ export default function Home() {
           <br />
           {site.address.street}, {site.address.city}
         </p>
-        <p className="mt-4 leading-8 text-muted">
+        <p className="mt-4 leading-8">
           Sessions and new students: Cecilia,{" "}
           <a href={site.phoneCeciliaHref}>{site.phoneCecilia}</a>
           <br />

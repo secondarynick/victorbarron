@@ -9,6 +9,7 @@ const serif = Newsreader({
   variable: "--font-serif",
   subsets: ["latin"],
   style: ["normal", "italic"],
+  axes: ["opsz"],
   display: "swap",
 });
 

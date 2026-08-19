@@ -71,7 +71,7 @@ export default function ReflectorPage() {
             </div>
           ))}
         </dl>
-        <p className="mt-4 text-muted">
+        <p className="mt-4">
           To order, call the office at{" "}
           <a href={site.phoneOfficeHref}>{site.phoneOffice}</a>.
         </p>

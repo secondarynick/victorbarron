@@ -58,7 +58,7 @@ export default function TrainingPage() {
 
       <Section className="mt-8">
         <h2 className="text-2xl">Daylong workshops</h2>
-        <p className="mt-4 max-w-2xl leading-8 text-muted">
+        <p className="mt-4 max-w-2xl leading-8">
           For those deepening a spiritual journey without entering the full
           training. Dates are on the <Link href="/calendar">calendar</Link>.
         </p>
@@ -75,7 +75,7 @@ export default function TrainingPage() {
       </Section>
 
       <Section className="mt-16 mb-24 border-t border-hairline pt-10">
-        <p className="max-w-2xl leading-8 text-muted">
+        <p className="max-w-2xl leading-8">
           Several sacred healing tools are used in the work, each with a
           special spiritual purpose. Special training and anointments from
           Victor are required to use each one at the highest level.

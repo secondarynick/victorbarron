@@ -3,8 +3,8 @@
 :root {
   --paper: #fdfcf9;
   --ink: #2b241d;
-  --muted: #6e655a;
-  --accent: #9a4b0f;
+  --muted: #5f574c;
+  --accent: #8f460e;
   --hairline: rgba(43, 36, 29, 0.16);
 }
 
@@ -29,8 +29,16 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-serif), Georgia, serif;
-  font-size: 17px;
+  font-size: 18px;
+  font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
+}
+
+p,
+li,
+dt,
+dd {
+  text-wrap: pretty;
 }
 
 ::selection {
@@ -55,7 +63,7 @@ main a {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
-  text-decoration-color: rgba(154, 75, 15, 0.4);
+  text-decoration-color: rgba(143, 70, 14, 0.4);
   transition: text-decoration-color 0.15s ease;
 }
 

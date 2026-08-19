@@ -83,11 +83,8 @@ export default function SessionsPage() {
         <h2 className="text-2xl">From people Victor has helped</h2>
         <div className="mt-6 space-y-10">
           {testimonials.map((item) => (
-            <blockquote
-              key={item.initials}
-              className="border-l-2 border-accent/50 pl-6"
-            >
-              <p className="leading-8 italic">“{item.quote}”</p>
+            <blockquote key={item.initials}>
+              <p className="max-w-2xl leading-8 italic">“{item.quote}”</p>
               <footer className="ui mt-3 text-[13px] text-muted">
                 — {item.initials}
               </footer>
