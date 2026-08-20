@@ -9,6 +9,7 @@ import {
   site,
   testimonials,
 } from "@/lib/content";
+import { photos } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Spiritual Sessions",
@@ -22,6 +23,8 @@ export default function SessionsPage() {
       <PageHero
         title="Sessions"
         lede="Victor calls the fifteen-minute spiritual session a tune-up, or reclaiming your life. One-hour sessions, shamanic work, and proxy healings are also available."
+        image={photos.ceremony}
+        imageAlt="Victor Barron during a healing ceremony"
       />
 
       <Section className="mt-6">

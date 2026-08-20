@@ -17,25 +17,11 @@ export default function AboutPage() {
       <PageHero
         title="About Victor"
         lede="Shaman, spiritual healer, shaman teacher, clairvoyant, and medium — with a special gift for accelerating a person's spiritual growth."
+        image={photos.victorGreen}
+        imageAlt="Victor Barron at the Body Mind & Spirit Healing Center"
       />
 
-      <div className="mx-auto mt-12 max-w-3xl px-5">
-        <div className="relative aspect-[3/2] overflow-hidden">
-          <Image
-            src={photos.victorRed}
-            alt="Victor Barron at the Body Mind & Spirit Healing Center"
-            fill
-            priority
-            sizes="(min-width: 768px) 720px, 100vw"
-            className="object-cover"
-          />
-        </div>
-        <p className="ui mt-3 text-xs text-muted">
-          Victor at the Body Mind & Spirit Healing Center in Whittier.
-        </p>
-      </div>
-
-      <Section className="prose-site mt-12 mb-24 max-w-3xl leading-8">
+      <Section className="prose-site mt-14 leading-8">
         <p>
           At a very early age, Victor’s unconditional love for God awakened a
           passion within him to help humanity heal itself. God has entrusted
@@ -49,6 +35,24 @@ export default function AboutPage() {
           help people establish an unbreakable spiritual foundation and bond
           with God.
         </p>
+      </Section>
+
+      <figure className="mx-auto mt-14 max-w-6xl px-6">
+        <div className="relative aspect-[3/2] overflow-hidden md:aspect-[2/1]">
+          <Image
+            src={photos.victorRed}
+            alt="Victor Barron at the Body Mind & Spirit Healing Center"
+            fill
+            sizes="(min-width: 1152px) 1104px, 100vw"
+            className="object-cover object-[center_35%]"
+          />
+        </div>
+        <figcaption className="ui mt-3 text-xs text-muted">
+          Victor at the Body Mind & Spirit Healing Center in Whittier.
+        </figcaption>
+      </figure>
+
+      <Section className="prose-site mt-14 mb-24 leading-8">
         <p>
           Throughout more than thirty-five years of healing others, he has
           stressed humility, integrity, and faith in God. He teaches his basic

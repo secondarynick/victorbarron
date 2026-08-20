@@ -4,12 +4,16 @@ import { nav, site } from "@/lib/content";
 export function Header() {
   return (
     <header className="border-b border-hairline">
-      <div className="mx-auto max-w-3xl px-5 pt-10 pb-6 md:pt-14">
-        <Link href="/" className="text-2xl font-medium tracking-tight">
-          {site.name}
+      <div className="mx-auto flex max-w-6xl flex-wrap items-baseline justify-between gap-x-8 gap-y-4 px-6 py-6 md:py-7">
+        <Link href="/" className="shrink-0">
+          <span className="text-[1.4rem] font-medium tracking-tight">
+            {site.name}
+          </span>
+          <span className="ml-3 hidden text-[15px] text-muted italic sm:inline">
+            {site.tagline}
+          </span>
         </Link>
-        <p className="mt-1 text-[15px] text-muted italic">{site.tagline}</p>
-        <nav className="ui mt-6 flex flex-wrap gap-x-5 gap-y-2.5 text-[14px] text-muted">
+        <nav className="ui flex flex-wrap gap-x-5 gap-y-2.5 text-[14px] text-muted">
           {nav.map((item) => (
             <Link
               key={item.href}

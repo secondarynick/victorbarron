@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { site } from "@/lib/content";
+import { photos } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -15,6 +16,8 @@ export default function ContactPage() {
       <PageHero
         title="Contact"
         lede="To arrange a spiritual session, inquire about classes, or ask a question, call the office or Cecilia."
+        image={photos.phonePark}
+        imageAlt="Victor Barron taking a phone call"
       />
 
       <Section className="mt-12">
@@ -95,7 +98,7 @@ export default function ContactPage() {
         </form>
       </Section>
 
-      <div className="mx-auto mt-16 mb-24 max-w-3xl px-5">
+      <div className="mx-auto mt-16 mb-24 max-w-3xl px-6">
         <div className="h-[340px] w-full">
           <iframe
             title="Map of Body Mind & Spirit Healing Center"

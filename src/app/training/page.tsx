@@ -18,6 +18,8 @@ export default function TrainingPage() {
       <PageHero
         title="Healer training"
         lede="From first principles to the highest levels of consciousness — a living school, not a weekend certificate."
+        image={photos.catedra}
+        imageAlt="Students gathered for a teaching at the Body Mind & Spirit Healing Center"
       />
 
       <Section className="mt-6">
@@ -28,8 +30,8 @@ export default function TrainingPage() {
         </p>
       </Section>
 
-      <div className="mx-auto mt-12 max-w-3xl px-5">
-        <div className="relative aspect-[3/2] overflow-hidden">
+      <div className="mx-auto mt-14 max-w-6xl px-6">
+        <div className="relative aspect-[3/2] overflow-hidden md:aspect-[2/1]">
           <Image
             src={photos.workshopFire}
             alt="Victor teaching a workshop at the Healing Center"

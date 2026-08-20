@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { site, storeItems } from "@/lib/content";
+import { photos } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Angels’ Corner Store",
@@ -16,6 +17,8 @@ export default function StorePage() {
       <PageHero
         title="Angels’ Corner"
         lede="Blessed tools for daily life, prepared at the Center. Please call the office for all purchases."
+        image={photos.virginMary}
+        imageAlt="Image of the Blessed Virgin Mary of Guadalupe at the Center"
       />
 
       <Section className="mt-6">

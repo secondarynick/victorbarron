@@ -4,11 +4,15 @@ type SectionProps = {
   children: ReactNode;
   className?: string;
   id?: string;
+  wide?: boolean;
 };
 
-export function Section({ children, className = "", id }: SectionProps) {
+export function Section({ children, className = "", id, wide }: SectionProps) {
   return (
-    <section id={id} className={`mx-auto max-w-3xl px-5 ${className}`}>
+    <section
+      id={id}
+      className={`mx-auto ${wide ? "max-w-6xl" : "max-w-3xl"} px-6 ${className}`}
+    >
       {children}
     </section>
   );

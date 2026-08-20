@@ -34,7 +34,7 @@ export default function ReflectorPage() {
         </p>
       </Section>
 
-      <div className="mx-auto mt-12 max-w-3xl px-5">
+      <div className="mx-auto mt-12 max-w-3xl px-6">
         <div className="relative aspect-[3/2] overflow-hidden">
           <Image
             src={photos.reflector}
