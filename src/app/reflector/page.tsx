@@ -19,7 +19,7 @@ export default function ReflectorPage() {
         lede="A blessed instrument of God — activated to protect the physical body’s energy field as you sleep and work."
       />
 
-      <Section className="prose-site mt-10 max-w-3xl leading-8">
+      <Section narrow className="prose-site mt-10 leading-8">
         <p>
           In addition to the magnetic grid, Victor was told in 2000 that a
           reflector would one day be needed in the home or office to assist and
@@ -34,7 +34,7 @@ export default function ReflectorPage() {
         </p>
       </Section>
 
-      <div className="mx-auto mt-12 max-w-3xl px-6">
+      <div className="mx-auto mt-12 max-w-6xl px-6"><div className="max-w-2xl">
         <div className="relative aspect-[3/2] overflow-hidden">
           <Image
             src={photos.reflector}
@@ -47,18 +47,18 @@ export default function ReflectorPage() {
         <p className="ui mt-3 text-xs text-muted">
           The Reflector / Neutralizor, blessed at the Center.
         </p>
-      </div>
+      </div></div>
 
-      <Section className="mt-14">
+      <Section narrow className="mt-14">
         <h2 className="text-2xl">What it is given to do</h2>
-        <ul className="mt-4 max-w-2xl space-y-1.5 leading-8">
+        <ul className="mt-4 list-disc space-y-1.5 pl-5 leading-8 marker:text-muted/60">
           {reflectorBenefits.map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
       </Section>
 
-      <Section className="mt-16 mb-24">
+      <Section narrow className="mt-16 mb-24">
         <h2 className="text-2xl">Prices</h2>
         <dl className="mt-6 max-w-2xl divide-y divide-hairline border-y border-hairline">
           {reflectorPrices.map((item) => (

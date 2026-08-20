@@ -17,7 +17,7 @@ export default function ClearingPage() {
         lede="A spiritual cleansing of the place you live or work — followed by a blessing that restores peace."
       />
 
-      <Section className="mt-12">
+      <Section narrow className="mt-12">
         <h2 className="text-2xl">Clearing and blessing</h2>
         <p className="mt-4 max-w-2xl leading-8">
           A spiritual cleansing of your home or business. Bad and stagnant
@@ -31,7 +31,7 @@ export default function ClearingPage() {
         </p>
       </Section>
 
-      <Section className="mt-12 mb-24">
+      <Section narrow className="mt-12 mb-24">
         <h2 className="text-2xl">Magnetic grid correction</h2>
         <p className="mt-4 max-w-2xl leading-8">
           This healing repairs, balances, and corrects magnetic tears in the

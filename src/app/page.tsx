@@ -26,7 +26,10 @@ export default function Home() {
             </p>
             <p className="mt-8 text-lg">
               To book a session, call Cecilia at{" "}
-              <a href={site.phoneCeciliaHref}>{site.phoneCecilia}</a>.
+              <a href={site.phoneCeciliaHref} className="font-medium">
+                {site.phoneCecilia}
+              </a>
+              .
             </p>
           </div>
           <div className="relative -mx-6 aspect-[4/3] md:mx-0 md:aspect-auto md:min-h-[560px] md:self-stretch">
@@ -42,7 +45,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Section wide className="mt-20 md:mt-28">
+      <Section className="mt-24 md:mt-32">
         <div className="grid items-center gap-x-16 gap-y-10 md:grid-cols-2">
           <div>
             <h2 className="text-3xl md:text-4xl">Sessions</h2>
@@ -70,7 +73,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section wide className="mt-20 md:mt-28">
+      <Section className="mt-24 md:mt-32">
         <div className="grid items-center gap-x-16 gap-y-10 md:grid-cols-2">
           <div className="relative order-last aspect-[3/2] overflow-hidden md:order-first">
             <Image
@@ -97,7 +100,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section className="mt-20 md:mt-28">
+      <Section narrow className="mt-24 md:mt-32">
         <h2 className="text-3xl md:text-4xl">Upcoming at the Center</h2>
         <ul className="mt-7 divide-y divide-hairline border-y border-hairline">
           {upcomingEvents.map((event) => (
@@ -114,7 +117,7 @@ export default function Home() {
         </p>
       </Section>
 
-      <figure className="mx-auto mt-20 max-w-6xl px-6 md:mt-28">
+      <figure className="mx-auto mt-24 max-w-6xl px-6 md:mt-32">
         <div className="relative aspect-[3/2] overflow-hidden md:aspect-[21/9]">
           <Image
             src={photos.ceremony}
@@ -129,7 +132,7 @@ export default function Home() {
         </figcaption>
       </figure>
 
-      <Section wide className="mt-20 md:mt-28">
+      <Section className="mt-24 md:mt-32">
         <div className="grid items-center gap-x-16 gap-y-10 md:grid-cols-[0.8fr_1.2fr]">
           <div className="relative mx-auto aspect-[3/4] w-56 sm:w-64 md:w-full md:max-w-xs">
             <Image
@@ -170,7 +173,7 @@ export default function Home() {
         </p>
       </Section>
 
-      <Section className="mt-24 border-t border-hairline pt-14 md:mt-32">
+      <Section narrow className="mt-24 md:mt-32">
         <h2 className="text-3xl md:text-4xl">A message to humanity</h2>
         <div className="prose-site mt-6 max-w-2xl leading-8">
           <p>{messageToHumanity[0]}</p>
@@ -179,7 +182,7 @@ export default function Home() {
         <p className="mt-6 italic text-muted">God bless — Victor</p>
       </Section>
 
-      <Section wide className="mt-20 mb-24 md:mt-28 md:mb-32">
+      <Section className="mt-24 mb-24 md:mt-32 md:mb-32">
         <div className="grid items-center gap-x-16 gap-y-10 md:grid-cols-2">
           <div>
             <h2 className="text-3xl md:text-4xl">Visit</h2>

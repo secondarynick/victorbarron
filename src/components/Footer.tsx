@@ -1,4 +1,5 @@
-import { site } from "@/lib/content";
+import Link from "next/link";
+import { nav, site } from "@/lib/content";
 
 export function Footer() {
   return (
@@ -37,10 +38,23 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-hairline">
-        <p className="ui mx-auto max-w-6xl px-6 py-5 text-xs text-muted/80">
-          © {new Date().getFullYear()} Victor Barron · Designed by{" "}
-          {site.studio.name}
-        </p>
+        <div className="ui mx-auto flex max-w-6xl flex-wrap items-baseline justify-between gap-x-8 gap-y-3 px-6 py-5 text-xs text-muted/80">
+          <p>
+            © {new Date().getFullYear()} Victor Barron · Designed by{" "}
+            {site.studio.name}
+          </p>
+          <nav className="flex flex-wrap gap-x-4 gap-y-2">
+            {nav.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="transition-colors hover:text-accent"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
       </div>
     </footer>
   );

@@ -11,7 +11,7 @@ export function PageHero({ title, lede, image, imageAlt }: PageIntroProps) {
   if (!image) {
     return (
       <div className="mx-auto max-w-6xl px-6 pt-14 md:pt-20">
-        <h1 className="max-w-3xl text-4xl leading-[1.1] md:text-6xl">
+        <h1 className="max-w-3xl text-4xl leading-[1.1] md:text-[3.4rem]">
           {title}
         </h1>
         {lede ? (

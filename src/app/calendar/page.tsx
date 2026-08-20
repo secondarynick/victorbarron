@@ -18,7 +18,7 @@ export default function CalendarPage() {
         lede="Sessions, workshops, and training at the Center. New students interested in beginner workshops should contact Cecilia to sign up."
       />
 
-      <Section className="mt-6">
+      <Section narrow className="mt-6">
         <p className="text-lg">
           Reserve with Cecilia at{" "}
           <a href={site.phoneCeciliaHref}>{site.phoneCecilia}</a> or the office
@@ -26,7 +26,7 @@ export default function CalendarPage() {
         </p>
       </Section>
 
-      <Section className="mt-14">
+      <Section narrow className="mt-14">
         <h2 className="text-2xl">Upcoming workshops</h2>
         <div className="mt-6 space-y-8">
           {upcomingEvents.map((event) => (
@@ -47,7 +47,7 @@ export default function CalendarPage() {
         </p>
       </Section>
 
-      <Section className="mt-16 mb-24">
+      <Section narrow className="mt-16 mb-24">
         <h2 className="text-2xl">Fees</h2>
         <p className="mt-3 max-w-2xl text-[15px] text-muted">
           Unless otherwise stated. Prepaid by Visa, Mastercard, debit, Zelle,

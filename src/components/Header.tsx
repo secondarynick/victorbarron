@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { nav, site } from "@/lib/content";
+import { NavLinks } from "@/components/NavLinks";
+import { site } from "@/lib/content";
 
 export function Header() {
   return (
@@ -13,16 +14,8 @@ export function Header() {
             {site.tagline}
           </span>
         </Link>
-        <nav className="ui flex flex-wrap gap-x-5 gap-y-2.5 text-[14px] text-muted">
-          {nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="transition-colors hover:text-accent"
-            >
-              {item.label}
-            </Link>
-          ))}
+        <nav className="ui flex flex-wrap gap-x-5 gap-y-2.5 text-[14px]">
+          <NavLinks />
         </nav>
       </div>
     </header>

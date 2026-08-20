@@ -20,7 +20,7 @@ export default function ContactPage() {
         imageAlt="Victor Barron taking a phone call"
       />
 
-      <Section className="mt-12">
+      <Section narrow className="mt-12">
         <h2 className="text-2xl">{site.address.name}</h2>
         <p className="mt-3 leading-8">
           {site.address.street}
@@ -51,7 +51,7 @@ export default function ContactPage() {
         </dl>
       </Section>
 
-      <Section className="mt-14">
+      <Section narrow className="mt-14">
         <h2 className="text-2xl">Write to the office</h2>
         <p className="mt-3 max-w-xl text-[15px] leading-7 text-muted">
           This opens your email app. For the fastest reply about sessions, call
@@ -98,7 +98,7 @@ export default function ContactPage() {
         </form>
       </Section>
 
-      <div className="mx-auto mt-16 mb-24 max-w-3xl px-6">
+      <div className="mx-auto mt-16 mb-24 max-w-6xl px-6"><div className="max-w-2xl">
         <div className="h-[340px] w-full">
           <iframe
             title="Map of Body Mind & Spirit Healing Center"
@@ -108,7 +108,7 @@ export default function ContactPage() {
             src="https://www.google.com/maps?q=6347+Friends+Avenue+Whittier+CA+90601&output=embed"
           />
         </div>
-      </div>
+      </div></div>
     </>
   );
 }

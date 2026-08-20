@@ -21,7 +21,7 @@ export default function AboutPage() {
         imageAlt="Victor Barron at the Body Mind & Spirit Healing Center"
       />
 
-      <Section className="prose-site mt-14 leading-8">
+      <Section narrow className="prose-site mt-14 leading-8">
         <p>
           At a very early age, Victor’s unconditional love for God awakened a
           passion within him to help humanity heal itself. God has entrusted
@@ -52,7 +52,7 @@ export default function AboutPage() {
         </figcaption>
       </figure>
 
-      <Section className="prose-site mt-14 mb-24 leading-8">
+      <Section narrow className="prose-site mt-14 mb-24 leading-8">
         <p>
           Throughout more than thirty-five years of healing others, he has
           stressed humility, integrity, and faith in God. He teaches his basic

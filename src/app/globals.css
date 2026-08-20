@@ -84,3 +84,7 @@ main a:hover {
 .prose-site p + p {
   margin-top: 1.25em;
 }
+
+blockquote {
+  hanging-punctuation: first;
+}

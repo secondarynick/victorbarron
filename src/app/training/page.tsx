@@ -22,7 +22,7 @@ export default function TrainingPage() {
         imageAlt="Students gathered for a teaching at the Body Mind & Spirit Healing Center"
       />
 
-      <Section className="mt-6">
+      <Section narrow className="mt-6">
         <p className="max-w-2xl leading-8">
           Victor teaches at the Body Mind & Spirit Healing Center in Whittier,
           and also in Europe and on the East Coast. New students should call
@@ -45,7 +45,7 @@ export default function TrainingPage() {
         </p>
       </div>
 
-      <Section className="mt-14">
+      <Section narrow className="mt-14">
         {trainingLevels.map((level) => (
           <article
             key={level.title}
@@ -58,7 +58,7 @@ export default function TrainingPage() {
         ))}
       </Section>
 
-      <Section className="mt-8">
+      <Section narrow className="mt-16">
         <h2 className="text-2xl">Daylong workshops</h2>
         <p className="mt-4 max-w-2xl leading-8">
           For those deepening a spiritual journey without entering the full
@@ -76,7 +76,7 @@ export default function TrainingPage() {
         </div>
       </Section>
 
-      <Section className="mt-16 mb-24 border-t border-hairline pt-10">
+      <Section narrow className="mt-16 mb-24 border-t border-hairline pt-10">
         <p className="max-w-2xl leading-8">
           Several sacred healing tools are used in the work, each with a
           special spiritual purpose. Special training and anointments from

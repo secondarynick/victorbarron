@@ -27,7 +27,7 @@ export default function SessionsPage() {
         imageAlt="Victor Barron during a healing ceremony"
       />
 
-      <Section className="mt-6">
+      <Section narrow className="mt-6">
         <p className="text-lg">
           To book, call Cecilia at{" "}
           <a href={site.phoneCeciliaHref}>{site.phoneCecilia}</a>. Session days
@@ -35,7 +35,7 @@ export default function SessionsPage() {
         </p>
       </Section>
 
-      <Section className="mt-14">
+      <Section narrow className="mt-14">
         {sessionTypes.map((item) => (
           <article
             key={item.title}
@@ -48,9 +48,9 @@ export default function SessionsPage() {
         ))}
       </Section>
 
-      <Section className="mt-8">
+      <Section narrow className="mt-16">
         <h2 className="text-2xl">Also offered</h2>
-        <ul className="mt-4 max-w-2xl space-y-1.5 leading-8">
+        <ul className="mt-4 list-disc space-y-1.5 pl-5 leading-8 marker:text-muted/60">
           {additionalServices.map((item) => (
             <li key={item}>{item}</li>
           ))}
@@ -60,7 +60,7 @@ export default function SessionsPage() {
         </p>
       </Section>
 
-      <Section className="mt-16">
+      <Section narrow className="mt-16">
         <h2 className="text-2xl">Fees</h2>
         <dl className="mt-6 max-w-2xl divide-y divide-hairline border-y border-hairline">
           {fees.slice(0, 3).map((fee) => (
@@ -82,7 +82,7 @@ export default function SessionsPage() {
         </p>
       </Section>
 
-      <Section className="mt-16">
+      <Section narrow className="mt-16">
         <h2 className="text-2xl">From people Victor has helped</h2>
         <div className="mt-6 space-y-10">
           {testimonials.map((item) => (
@@ -96,7 +96,7 @@ export default function SessionsPage() {
         </div>
       </Section>
 
-      <Section className="mt-16 mb-24 border-t border-hairline pt-10">
+      <Section narrow className="mt-16 mb-24 border-t border-hairline pt-10">
         <p className="max-w-2xl text-[15px] leading-7 text-muted">
           Spiritual healing is intended to complement, not replace, medical
           care. Victor Barron is a spiritual practitioner offering shamanic and

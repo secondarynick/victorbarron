@@ -21,14 +21,14 @@ export default function StorePage() {
         imageAlt="Image of the Blessed Virgin Mary of Guadalupe at the Center"
       />
 
-      <Section className="mt-6">
+      <Section narrow className="mt-6">
         <p className="text-lg">
           Office: <a href={site.phoneOfficeHref}>{site.phoneOffice}</a> · Also
           see the <Link href="/reflector">Super Spiritual Reflector</Link>.
         </p>
       </Section>
 
-      <Section className="mt-14 mb-24">
+      <Section narrow className="mt-14 mb-24">
         <div className="divide-y divide-hairline border-y border-hairline">
           {storeItems.map((item) => (
             <article key={item.name} className="py-6">
